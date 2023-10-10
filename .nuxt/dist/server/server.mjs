@@ -1,0 +1,1 @@
+export { default } from "file:///home/ronaldo/EPITECH/JobBoardPOC/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
