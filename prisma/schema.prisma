@@ -29,5 +29,95 @@ model People {
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
+  bookmarked Bookmarked?
+  application Application[]
 
+}
+
+model Companies {
+  id String @id @unique @default(cuid())
+
+  name String @unique
+  email String
+  about String
+  address String
+  phone String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  Advertisement Advertisement[]
+
+}
+
+enum AdvertisementStatus {
+  PENDING
+  COMPLETED
+}
+
+model  Advertisement {
+  id String @id @unique @default(cuid())
+
+  title String
+  description String
+  status AdvertisementStatus @default(PENDING)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  componyAdvertisement Companies @relation(fields: [advertisementId], references: [id])
+  advertisementId String
+
+  jobTitle Job @relation(fields: [type], references: [name])
+  type String @unique
+
+  bookmarked Bookmarked[]
+  application Application[]
+
+}
+
+model Bookmarked {
+  id String @id @unique @default(cuid())
+
+  people People @relation(fields: [personId], references: [id])
+  personId String @unique
+
+  advertisement Advertisement @relation(fields: [advertisementId], references: [id])
+  advertisementId String
+}
+
+
+model Job {
+  id String @id @unique @default(cuid())
+
+  name String @unique
+  description String
+
+  advertisement Advertisement?
+
+  application Application @relation(fields: [applicationId], references: [id])
+  applicationId String @unique
+
+}
+
+enum StatusApplication {
+  PENDING
+  ACCEPTED
+  REJECTED
+}
+
+model Application {
+  id  String @id @unique @default(cuid())
+
+  resume String
+  cover String
+  status StatusApplication @default(PENDING)
+
+  advertisement Advertisement @relation(fields: [advertisementId], references: [id])
+  advertisementId String
+
+  person People @relation(fields: [personId], references: [id])
+  personId String
+
+  job Job?
 }
