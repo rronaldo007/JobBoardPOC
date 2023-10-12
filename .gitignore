@@ -5,3 +5,6 @@ package-lock.json
 .nuxt/*
 .nuxt
 .env
+.idea
+.vscode
+prisma/migrations/*
