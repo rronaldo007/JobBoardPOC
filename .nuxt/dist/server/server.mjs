@@ -1,1 +1,1 @@
-export { default } from "file:///home/ronaldo/EPITECH/JobBoardPOC/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
+export { default } from "file:///home/quentin/Dev/Piscine%20Web/JobBoard/POC/JobBoardPOC/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
