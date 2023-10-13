@@ -5,7 +5,14 @@ package-lock.json
 .nuxt/*
 .nuxt
 .env
+<<<<<<< HEAD
 .idea
 .vscode
 prisma/migrations/*
+=======
+<<<<<<< HEAD
+>>>>>>> cd8c5f5 (laod files added)
 prisma/migrations
+=======
+prisma/migrations/*
+>>>>>>> 517a88f (laod files added)
