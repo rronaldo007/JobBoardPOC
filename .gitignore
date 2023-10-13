@@ -7,3 +7,4 @@ package-lock.json
 .nuxt/*
 .nuxt
 .env
+prisma/migrations/*
