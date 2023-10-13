@@ -19,104 +19,102 @@ enum Role {
 model People {
   id String @id @unique @default(cuid())
 
-  mail String @unique
+  mail     String @unique
   password String
 
   firstName String
-  lastName String
-  role Role @default(USER)
+  lastName  String
+  role      Role   @default(USER)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
-  bookmarked Bookmarked?
+  bookmarked  Bookmarked?
   application Application[]
-
 }
 
 model Companies {
   id String @id @unique @default(cuid())
 
-  name String @unique
-  email String
-  about String
+  name    String @unique
+  email   String
+  about   String
   address String
-  phone String
+  phone   String
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   Advertisement Advertisement[]
-
 }
 
 enum AdvertisementStatus {
   PENDING
   COMPLETED
+  CANCELLED
+  DRAFT
 }
 
-model  Advertisement {
+model Advertisement {
   id String @id @unique @default(cuid())
 
-  title String
+  title       String
   description String
-  status AdvertisementStatus @default(PENDING)
+  status      AdvertisementStatus @default(PENDING)
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
 
   componyAdvertisement Companies @relation(fields: [advertisementId], references: [id])
-  advertisementId String
+  advertisementId      String
 
-  jobTitle Job @relation(fields: [type], references: [name])
-  type String @unique
+  jobTitle Job    @relation(fields: [type], references: [name])
+  type     String @unique
 
-  bookmarked Bookmarked[]
+  bookmarked  Bookmarked[]
   application Application[]
-
 }
 
 model Bookmarked {
   id String @id @unique @default(cuid())
 
-  people People @relation(fields: [personId], references: [id])
+  people   People @relation(fields: [personId], references: [id])
   personId String @unique
 
-  advertisement Advertisement @relation(fields: [advertisementId], references: [id])
+  advertisement   Advertisement @relation(fields: [advertisementId], references: [id])
   advertisementId String
 }
-
 
 model Job {
   id String @id @unique @default(cuid())
 
-  name String @unique
+  name        String @unique
   description String
 
   advertisement Advertisement?
 
-  application Application @relation(fields: [applicationId], references: [id])
-  applicationId String @unique
-
+  application   Application @relation(fields: [applicationId], references: [id])
+  applicationId String      @unique
 }
 
 enum StatusApplication {
   PENDING
   ACCEPTED
   REJECTED
+  DRAFT
 }
 
 model Application {
-  id  String @id @unique @default(cuid())
+  id String @id @unique @default(cuid())
 
   resume String
-  cover String
+  cover  String
   status StatusApplication @default(PENDING)
 
-  advertisement Advertisement @relation(fields: [advertisementId], references: [id])
+  advertisement   Advertisement @relation(fields: [advertisementId], references: [id])
   advertisementId String
 
-  person People @relation(fields: [personId], references: [id])
+  person   People @relation(fields: [personId], references: [id])
   personId String
 
   job Job?
