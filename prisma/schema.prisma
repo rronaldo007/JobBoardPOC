@@ -19,7 +19,7 @@ enum Role {
 model People {
   id String @id @unique @default(cuid())
 
-  mail     String @unique
+  email    String @unique
   password String
 
   firstName String

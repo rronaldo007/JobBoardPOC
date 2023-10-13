@@ -1,1 +1,0 @@
-export { default } from "file:///home/quentin/Dev/Piscine%20Web/JobBoard/POC/JobBoardPOC/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
