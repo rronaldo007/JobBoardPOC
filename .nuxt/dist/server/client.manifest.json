@@ -7,12 +7,12 @@
     "module": true,
     "resourceType": "script"
   },
-  "/home/quentin/Dev/Piscine Web/JobBoard/POC/JobBoardPOC/node_modules/nuxt/dist/app/entry.js": {
+  "/home/ronaldo/EPITECH/JobBoardPOC/node_modules/nuxt/dist/app/entry.js": {
     "resourceType": "script",
     "module": true,
     "prefetch": true,
     "preload": true,
     "isEntry": true,
-    "file": "/home/quentin/Dev/Piscine Web/JobBoard/POC/JobBoardPOC/node_modules/nuxt/dist/app/entry.js"
+    "file": "/home/ronaldo/EPITECH/JobBoardPOC/node_modules/nuxt/dist/app/entry.js"
   }
 }

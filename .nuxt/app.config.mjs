@@ -1,6 +1,6 @@
 
 import { updateAppConfig } from '#app'
-import { defuFn } from '/home/quentin/Dev/Piscine Web/JobBoard/POC/JobBoardPOC/node_modules/defu/dist/defu.mjs'
+import { defuFn } from '/home/ronaldo/EPITECH/JobBoardPOC/node_modules/defu/dist/defu.mjs'
 
 const inlineConfig = {
   "nuxt": {}
