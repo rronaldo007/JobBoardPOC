@@ -7,4 +7,8 @@ package-lock.json
 .nuxt/*
 .nuxt
 .env
+<<<<<<< HEAD
 prisma/migrations
+=======
+prisma/migrations/*
+>>>>>>> 517a88f (laod files added)
