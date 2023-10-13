@@ -92,9 +92,6 @@ model Job {
   description String
 
   advertisement Advertisement?
-
-  application   Application @relation(fields: [applicationId], references: [id])
-  applicationId String      @unique
 }
 
 enum StatusApplication {
@@ -116,6 +113,4 @@ model Application {
 
   person   People @relation(fields: [personId], references: [id])
   personId String
-
-  job Job?
 }
