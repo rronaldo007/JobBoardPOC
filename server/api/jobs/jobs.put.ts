@@ -24,4 +24,8 @@ export default defineEventHandler(async(event) => {
         throw createError({statusCode: 500, message : "internal server error"})
     }
 
+<<<<<<< HEAD
 })
+=======
+})
+>>>>>>> origin/nuxt-server

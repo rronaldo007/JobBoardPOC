@@ -55,26 +55,6 @@ enum AdvertisementStatus {
   DRAFT
 }
 
-model Advertisement {
-  id String @id @unique @default(cuid())
-
-  title       String
-  description String
-  status      AdvertisementStatus @default(PENDING)
-
-  createdAt DateTime @default(now())
-  updatedAt DateTime @updatedAt
-
-  componyAdvertisement Companies @relation(fields: [advertisementId], references: [id])
-  advertisementId      String
-
-  jobTitle Job    @relation(fields: [type], references: [name])
-  type     String @unique
-
-  bookmarked  Bookmarked[]
-  application Application[]
-}
-
 model Bookmarked {
   id String @id @unique @default(cuid())
 
@@ -83,15 +63,6 @@ model Bookmarked {
 
   advertisement   Advertisement @relation(fields: [advertisementId], references: [id])
   advertisementId String
-}
-
-model Job {
-  id String @id @unique @default(cuid())
-
-  name        String @unique
-  description String
-
-  advertisement Advertisement[]
 }
 
 enum StatusApplication {
@@ -114,3 +85,42 @@ model Application {
   person   People @relation(fields: [personId], references: [id])
   personId String
 }
+
+model Advertisement {
+  id String @id @unique @default(cuid())
+
+  title       String
+  description String
+  status      AdvertisementStatus @default(PENDING)
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  componyAdvertisement Companies @relation(fields: [advertisementId], references: [id])
+  advertisementId      String
+
+  bookmarked  Bookmarked[]
+  application Application[]
+  jobs        Job[]
+}
+
+model Job {
+  id String @id @unique @default(cuid())
+
+  name        String @unique
+  description String
+
+  advertisements Advertisement[]
+}
+
+// model JobsAdversements {
+//   advertisement   Advertisement @relation(fields: [advertisementId], references: [id])
+//   advertisementId String
+//
+//   job   Job    @relation(fields: [jobId], references: [id])
+//   jobId String
+//
+//   assignedAt DateTime @default(now())
+//
+//   @@id([advertisementId, jobId])
+// }
