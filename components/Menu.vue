@@ -1,0 +1,29 @@
+<template>
+    <nav>
+        <ul>
+            <li>
+                <nuxt-link to="/">Accueil</nuxt-link>
+            </li>
+            <li>
+                <nuxt-link to="/advertisements">Annonces</nuxt-link>
+            </li>            
+            <li>
+                <nuxt-link to="/account">Account</nuxt-link>
+            </li>
+            <li>
+                <nuxt-link to="/companies">Companies</nuxt-link>
+            </li>
+            <li>
+                <nuxt-link to="/about">About</nuxt-link>
+            </li>
+        </ul>
+    </nav>
+</template>
+
+<script>
+
+</script>
+
+<style lang="scss" scoped>
+
+</style>
