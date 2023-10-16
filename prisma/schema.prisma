@@ -91,7 +91,7 @@ model Job {
   name        String @unique
   description String
 
-  advertisement Advertisement?
+  advertisement Advertisement[]
 }
 
 enum StatusApplication {
