@@ -1,18 +1,16 @@
 <template>
-    <div class="container">
+    <div class="custom-container">
         <Header/>
         <!-- page content output-->
-        <main>
+        <main class="bg-slate-200">
             <slot />
         </main>
 
-        <footer>
-            <p>&copy; 2023 Job Junction</p>
-        </footer>
+        <Footer/>
     </div>
 </template>
 <style scoped >
-    .container {
+    .custom-container {
         display: grid;
         min-height: 100vh;
         min-height: 100dvh;

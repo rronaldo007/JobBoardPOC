@@ -1,6 +1,6 @@
 <template>
     <nav>
-        <ul>
+        <ul class="flex gap-3">
             <li>
                 <nuxt-link to="/">Accueil</nuxt-link>
             </li>
