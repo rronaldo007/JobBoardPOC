@@ -14,6 +14,9 @@
                 <nuxt-link to="/companies">Companies</nuxt-link>
             </li>
             <li>
+                <nuxt-link to="/admin">Admin</nuxt-link>
+            </li>
+            <li>
                 <nuxt-link to="/about">About</nuxt-link>
             </li>
         </ul>
@@ -24,6 +27,6 @@
 
 </script>
 
-<style lang="scss" scoped>
+<style scoped>
 
 </style>
