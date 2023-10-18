@@ -1,8 +1,7 @@
 <template>
  <NuxtLayout>
-    <div class="bg-teal-500">
-    </div>
-    <div>
+    <div class="grid gap-10 pb-10">
+        <Hero/>
         <div class="container mx-auto">
             <Cards>
                 <Card/>
