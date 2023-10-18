@@ -1,6 +1,6 @@
 <template>
-    <nav>
-        <ul class="flex gap-3">
+    <nav class="bg-white border-gray-200">
+        <ul class="flex flex-wrap gap-3">
             <li>
                 <nuxt-link to="/">Accueil</nuxt-link>
             </li>
