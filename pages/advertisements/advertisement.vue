@@ -1,9 +1,7 @@
 <template>
-    <NuxtLayout>
         <div>
             Single Advertisement page
         </div>
-    </NuxtLayout>
 </template>
 
 <script setup>

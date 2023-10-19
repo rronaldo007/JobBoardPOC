@@ -1,16 +1,7 @@
 <template>
-    <NuxtLayout>
-        <div>
-            account page,
-            login, register and forgot password
-        </div>
-    </NuxtLayout>
+  <div>account page, login, register and forgot password</div>
 </template>
 
-<script setup>
+<script setup></script>
 
-</script>
-
-<style lang="scss" scoped>
-
-</style>
+<style lang="scss" scoped></style>

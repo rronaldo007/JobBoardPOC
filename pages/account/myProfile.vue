@@ -1,9 +1,7 @@
 <template>
-    <NuxtLayout>
         <div>
             my profile page
         </div>
-    </NuxtLayout>
 </template>
 
 <script setup>

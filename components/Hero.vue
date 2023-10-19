@@ -16,12 +16,16 @@
         class="flex flex-col space-y-4 sm:flex-row sm:justify-center sm:space-y-0 sm:space-x-4"
       >
         <a href="#" class="btn-primary" aria-label="Get started with Job Junction">
-          Get started
+          Find the perfect job
           <ArrowIcon class="w-3.5 h-3.5 ml-2" aria-hidden="true" />
         </a>
-        <a href="#" class="btn-secondary" aria-label="Learn more about Job Junction">
+        <nuxt-link
+          to="/about"
+          class="btn-secondary"
+          aria-label="Learn more about Job Junction"
+        >
           Learn more
-        </a>
+        </nuxt-link>
       </div>
     </div>
   </section>

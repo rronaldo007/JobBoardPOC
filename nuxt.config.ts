@@ -23,4 +23,14 @@ export default defineNuxtConfig({
       autoprefixer: {},
     },
   },
+  app: {
+    layoutTransition: { name: 'layout', mode: 'out-in' },
+    head: {
+      title: 'Job Junction - Connecting Companies with Talents',
+      charset: 'utf-8',
+      viewport: 'width=device-width, initial-scale=1',
+    }
+  },
+  
+  
 })

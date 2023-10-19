@@ -1,9 +1,7 @@
 <template>
-    <NuxtLayout>
         <div>
             Companies page
         </div>
-    </NuxtLayout>
 </template>
 
 <script setup>
